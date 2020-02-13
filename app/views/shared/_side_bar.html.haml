@@ -1,0 +1,24 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__box
+      %p.user-name
+        masa
+      %ul.btn
+        %li.btn__group
+          = link_to "#", class:"edit" do
+            = icon('far', 'edit')
+        %li.btn__user
+          = link_to "#", class:"cog" do
+            = icon('fas', 'cog')
+  .side-group
+    .side-group-list
+      .side-group-list__name
+        グループ名
+      .side-group-list__massage
+        メッセージ
+    .side-group-list
+      .side-group-list__name
+        グループ名
+      .side-group-list__massage
+        メッセージ
+
