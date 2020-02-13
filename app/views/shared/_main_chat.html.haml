@@ -1,0 +1,37 @@
+.main-chat
+  .main-header
+    .main-header__information
+      グループ名
+      %ul.list
+        メンバー
+        %li.list__name
+          あああ
+        %li.kist__name
+          いいい
+    .main-header__edit
+      = link_to "Edit", "#", class:"edit-btn"
+  .main-content
+    .main-content__box
+      .main-content__box__date
+        .main-content__box__date__name
+          ユーザー名
+        .main-content__box__date__time
+          2020/02/12
+      .main-content__box__message
+        あああああああ
+    .main-content__box
+      .main-content__bpx__date
+        .main-content__box__date__name
+          ユーザー名
+        .main-content__box__date__time
+          2020/02/12
+      .main-content__box__message
+        あああああああ
+  .main-fotter
+    %form.main-form
+      .input-box
+        %input{type: 'text', class: 'input-box__text', placeholder: "type a message"}
+        %label{class:'input-box__image'}
+          =icon('fas', 'image')
+          %input{type: 'file', class: 'input-box__image__file'}
+      %input{type: 'submit', class: 'submit-btn', value: "Send"}
