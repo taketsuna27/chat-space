@@ -5,20 +5,17 @@
         = current_user.name
       %ul.btn
         %li.btn__group
-          = link_to "", class:"edit" do
+          = link_to new_group_path, class:"edit" do
             = icon('far', 'edit')
         %li.btn__user
           = link_to edit_user_path(current_user), class:"cog" do
             = icon('fas', 'cog')
   .side-group
-    .side-group-list
-      .side-group-list__name
-        グループ名
-      .side-group-list__massage
-        メッセージ
-    .side-group-list
-      .side-group-list__name
-        グループ名
-      .side-group-list__massage
-        メッセージ
-
+    - current_user.groups.each do |group|
+      .side-group-list
+        = link_to '#' do
+          .side-group-list__name
+            = group.name
+          .side-group-list__massage
+            メッセージはまだありません。
+   
