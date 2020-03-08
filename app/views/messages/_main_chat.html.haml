@@ -3,9 +3,9 @@
     .main-header__information
       = @group.name
       %ul.list
-        メンバー
-        %li.list__name
-          - @group.users.each do |user|
+        Member:
+        - @group.users.each do |user|
+          %li.list__name
             = user.name
     .main-header__edit
       = link_to "Edit", edit_group_path(@group), class:"edit-btn"
